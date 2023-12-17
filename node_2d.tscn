@@ -74,4 +74,6 @@ position = Vector2(332, 281)
 scale = Vector2(12.7187, 12.7188)
 sprite_frames = SubResource("SpriteFrames_afvlr")
 animation = &"idle"
-frame_progress = 0.928738
+autoplay = "idle"
+frame = 3
+frame_progress = 0.650311
