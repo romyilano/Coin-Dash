@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://d4enyi07dkuov"]
+[gd_scene load_steps=31 format=3 uid="uid://d4enyi07dkuov"]
 
 [ext_resource type="Texture2D" uid="uid://b4jd6yesevblq" path="res://assets/player/hurt/player-hurt-1.png" id="1_05h25"]
 [ext_resource type="Texture2D" uid="uid://caepx7aqb7y7h" path="res://assets/player/run/player-run-1.png" id="1_78tc1"]
 [ext_resource type="Texture2D" uid="uid://yt00srw3p6qe" path="res://assets/player/idle/player-idle-1.png" id="1_dsxrp"]
+[ext_resource type="Texture2D" uid="uid://jvakdeji1ogd" path="res://assets/grass.png" id="1_igmxu"]
 [ext_resource type="Script" path="res://Coin.gd" id="1_lvhtl"]
 [ext_resource type="Texture2D" uid="uid://d3u24ifopn787" path="res://assets/coin/coin-frame-1.png" id="1_nurqj"]
 [ext_resource type="Script" path="res://player.gd" id="1_oihgt"]
@@ -127,7 +128,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh8x4"]
 size = Vector2(30, 45)
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 473.0
+offset_bottom = 713.0
+texture = ExtResource("1_igmxu")
+stretch_mode = 1
 
 [node name="Coin" type="Area2D" parent="." groups=["coins"]]
 script = ExtResource("1_lvhtl")
@@ -136,7 +143,7 @@ script = ExtResource("1_lvhtl")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_0ti2f")
 animation = &"sparkle"
-frame_progress = 0.783727
+frame_progress = 0.0734142
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 position = Vector2(0, 1)
@@ -159,5 +166,9 @@ metadata/_edit_group_ = true
 position = Vector2(-2, -0.5)
 shape = SubResource("RectangleShape2D_uh8x4")
 metadata/_edit_group_ = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="area_entered" from="Player" to="Player" method="_on_area_entered"]
