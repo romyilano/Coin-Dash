@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqdxs482iotlf"]
+[gd_scene load_steps=15 format=3 uid="uid://dqdxs482iotlf"]
 
 [ext_resource type="Texture2D" uid="uid://yt00srw3p6qe" path="res://assets/player/idle/player-idle-1.png" id="1_1ecqx"]
 [ext_resource type="Texture2D" uid="uid://b4jd6yesevblq" path="res://assets/player/hurt/player-hurt-1.png" id="1_dsrfp"]
@@ -67,13 +67,22 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scn7d"]
+size = Vector2(40.5, 42)
+
 [node name="Player" type="Area2D"]
+position = Vector2(94, 85)
+scale = Vector2(2, 2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(332, 281)
-scale = Vector2(12.7187, 12.7188)
+position = Vector2(0.641, 2.08165e-12)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_afvlr")
 animation = &"idle"
 autoplay = "idle"
 frame = 3
 frame_progress = 0.650311
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.25, 11)
+shape = SubResource("RectangleShape2D_scn7d")
