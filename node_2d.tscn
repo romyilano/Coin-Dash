@@ -24,7 +24,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"hurt",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -41,7 +41,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -64,12 +64,15 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="Area2D" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(52, 35)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_l0050")
-animation = &"hurt"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.346115
