@@ -145,7 +145,7 @@ script = ExtResource("1_lvhtl")
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_0ti2f")
 animation = &"sparkle"
-frame_progress = 0.312706
+frame_progress = 0.513946
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 position = Vector2(0, 1)

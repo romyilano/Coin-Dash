@@ -23,10 +23,6 @@ func new_game():
 	$Player.show()
 	$GameTimer.start()
 	spawn_coins()
-		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 	
 func spawn_coins():
 	for i in level + 4:
@@ -34,3 +30,12 @@ func spawn_coins():
 		add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+		
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if playing and get_tree().get_nodes_in_group("coins").size() == 0:
+		level += 1
+		time_left += 5
+		spawn_coins()
+		
+	
