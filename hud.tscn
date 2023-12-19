@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://jjdjbnvub0v7"]
+[gd_scene load_steps=3 format=3 uid="uid://jjdjbnvub0v7"]
+
+[ext_resource type="FontFile" uid="uid://ct5tsqmdb5f3d" path="res://Kenney Bold.ttf" id="1_44run"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_88p5o"]
+font = ExtResource("1_44run")
+font_size = 48
+shadow_size = 4
+shadow_color = Color(0, 0, 0.0470588, 0.996078)
+shadow_offset = Vector2(2, 2)
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -12,5 +21,6 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Coin Dash!"
+label_settings = SubResource("LabelSettings_88p5o")
 horizontal_alignment = 1
 vertical_alignment = 1
