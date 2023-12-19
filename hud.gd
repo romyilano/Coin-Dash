@@ -10,6 +10,13 @@ func _ready():
 func _process(delta):
 	pass
 
+func show_message(text):
+	$Message.text = text
+	$Message.show()
+	$Timer.start()
+	
+func _on_timer_timeout():
+	$Message.hide()
 
 func update_score(value):
 	$MarginContainer/Score.text = str(value)

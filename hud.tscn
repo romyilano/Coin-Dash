@@ -49,3 +49,5 @@ text = "Coin Dash!"
 label_settings = SubResource("LabelSettings_88p5o")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
