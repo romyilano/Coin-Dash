@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://jjdjbnvub0v7"]
+[gd_scene load_steps=5 format=3 uid="uid://jjdjbnvub0v7"]
 
 [ext_resource type="FontFile" uid="uid://ct5tsqmdb5f3d" path="res://Kenney Bold.ttf" id="1_44run"]
 [ext_resource type="Script" path="res://hud.gd" id="1_xuxse"]
+[ext_resource type="Script" path="res://StartButton.gd" id="3_8k8ed"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_88p5o"]
 font = ExtResource("1_44run")
@@ -51,3 +52,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -32.0
+offset_right = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_44run")
+text = "Start"
+script = ExtResource("3_8k8ed")
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_start_button_pressed"]
